@@ -1,0 +1,7 @@
+form.searchBar {
+    background-color: var(--bg-blue-telefonica);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+}

@@ -1,0 +1,86 @@
+:root {
+    --bg-blue-telefonica: #033076;
+
+    --logo-height: 100px;
+    --header-height: 100px;
+    --aside-width: 225px;
+    --search-bar-width: 225px;
+    --footer-height: 40px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Telefonica-Regular', sans-serif;
+}
+
+/* Layout em Grid */
+
+.app {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: var(--aside-width) 1fr var(--search-bar-width);
+    grid-template-rows:
+        var(--header-height)
+        1fr
+        var(--footer-height);
+    grid-template-areas:
+        "logo header search"
+        "menu content content"
+        "footer footer footer";
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+aside.logo {
+    grid-area: logo;
+}
+
+header.header {
+    grid-area: header;
+}
+
+form.searchBar {
+    grid-area: search;
+}
+
+aside.menu-area {
+    grid-area: menu;
+}
+
+main.content {
+    grid-area: content;
+}
+
+footer.footer {
+    grid-area: footer;
+}
+
+@font-face {
+	font-family: 'Telefonica-Bold';
+	src: url('../../fonts/Telefonica-Bold.ttf') format('truetype'),
+         url('../../fonts/Telefonica-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Telefonica-Light';
+	src: url('../../fonts/Telefonica-Light.ttf') format('truetype'),
+         url('../../fonts/Telefonica-Light.woff') format('woff');
+    font-style: normal;
+    font-weight: lighter;
+}
+
+@font-face {
+	font-family: 'Telefonica-Regular';
+	src: url('../../fonts/Telefonica-Regular.ttf') format('truetype'),
+         url('../../fonts/Telefonica-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.regular { font-family: 'Telefonica-Regular', 'Arial', sans-serif; }
+.light { font-family: 'Telefonica-Light', 'Arial', sans-serif; }
+.bold { font-family: 'Telefonica-Bold', 'Arial', sans-serif; }

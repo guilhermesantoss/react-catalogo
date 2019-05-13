@@ -1,0 +1,7 @@
+header.header {
+    background-color: var(--bg-blue-telefonica);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
